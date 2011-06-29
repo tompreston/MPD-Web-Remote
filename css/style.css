@@ -1,0 +1,91 @@
+#lastUpdated
+{
+  font-style: italic;
+  font-size: 10pt;
+}
+
+#previousButton
+{
+  float: left;
+  width: 100px;
+  height: 48px;
+  background: url("../images/previous.png") no-repeat 0 0;
+}
+
+#playPauseButton
+{
+  float: left;
+  width: 60px;
+  height: 48px;
+  background: url("../images/playPause.png") no-repeat 0 0;
+}
+
+#nextButton
+{
+  float: left;
+  width: 100px;
+  height: 48px;
+  background: url("../images/next.png") no-repeat 0 0;
+}
+
+#buttonWrapper
+{
+  /*position: absolute;
+  top: 385px;*/
+  width: 100%;
+}
+
+#buttonHolder
+{
+  margin-left: auto;
+  margin-right: auto;
+  width:260px;
+}
+
+#buttonBackgroundFiller
+{
+  height: 48px;
+  width:100%;
+  background-image:url('../images/filler.png');
+  background-repeat:repeat-x;
+}
+
+#spacer
+{
+  height:0px;
+}
+
+.addTrack
+{
+  background-image:url('../images/add.png');
+  position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 10px;
+	top: 10px;
+	margin: 0;
+}
+
+.addTrackDirectory
+{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a5b1ba), color-stop(3%, #909faa), color-stop(97%, #b5bfc6), to(#989ea4));
+	height: 22px!important;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	text-shadow: gray 0 1px 0;
+	line-height: 22px;
+	padding-left: 20px;
+	border-bottom: none!important;
+	display:block;
+}
+
+#noResultsHolder
+{
+  margin-left: auto;
+  margin-right: auto;
+  width:100px;
+  color:#4C4C4C;
+  font-weight:bold;
+}

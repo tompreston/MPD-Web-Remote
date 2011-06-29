@@ -1,0 +1,93 @@
++==============================================================================+
+| Remote WebApp                                                                |
+| Version 1.0                                                                  |
+| An MPD media interface intended for iOS Devices                              |
+| Thomas Preston                                                               |
++==============================================================================+
+
+    Copyright (C) 2011  Thomas Preston
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+
+================================================================================
+About:
+--------------------------------------------------------------------------------
+For this to work you will need:
+  - MPD (obviously)
+  - a webserver with PHP installed
+  - a webkit compatible web browser (Mobile/Safari, Google Chrome)
+
+Then just put the remote directory somewhere on your server. I have it at
+/srv/http/remote but you can put it wherever you like.
+
+Browse to it on your phone and then go to the bookmarks icon and press 'Add to
+Home Screen'. The idea is for the web application to look and feel like a native
+app. You can change the colour of the icon by replacing the apple-touch-icon.png
+with one of the other icons in appleTouchIcons or by creating your own.
+
+If you have any suggestions or bugs then please contact me at:
+thomas.mark.preston+mpdremote@gmail.com
+
+HUGE thanks to:
+  - iWebKit for the style sheets; without which I this would't have looked half
+    as pretty!
+      http://snippetspace.com/projects/iwebkit/
+    
+  - Whoever made mpd.class.php.
+    
+  - MPD Protocol reference for my help with my custom commands.
+      http://www.musicpd.org/doc/protocol/index.html
+  
+  - Ellen Speakman for providing the touch icons. x
+  
+  - Radioactivity for the speaker icon.
+     http://radioactivity.deviantart.com/art/Speaker-Icon-110884165
+    
+Thank you. :-)
+
+================================================================================
+Change Log:
+--------------------------------------------------------------------------------
+	27/02/11 - First Release
+
+================================================================================
+Explanation (in case you want to make some changes):
+--------------------------------------------------------------------------------
+Files:
+ - apple-touch-icon.png - WebApp icon for iOS's springboard
+ - startup.png          - An placeholder while the webpage loads on an iPhone
+ - NOTE: You will have to bookmark the webapp to your homescreen to see these.
+  
+ - index.php       - main remote interface
+ - playqueue.html  - displays the playqueue
+ - addtrack.html   - Add tracks root; shows all songs, playlists and search
+ - showSongs.php   - second level for adding tracks; shows the actual tracks
+ 
+ + appleTouchIcons - contains some extra icons
+ + css             - style sheets
+ + javascript      - all of the client side code
+ + mpd             - all of the server side code
+  - mpd.class.php   - interfaces with the MPD server
+  - mpdconfig.php   - handy config file
+  - mpdcontrol.php  - my front end for controlling MPD (uses mpd.class.php)
+  - mpdquery.php    - my front end for querying MPD    (uses mpd.class.php)
+  - globalFunctions.php - some global functions. NEAT. UNT. TIDY.
+ + images          - um... well... images...
+  
+Simple explanation:
+  The client side javascript deals with most user input and then, using ajax,
+  passes commands to the mpd files stored on the server. They all return some
+  text values which are formatted by the javascript and then passed to the page.
