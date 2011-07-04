@@ -20,6 +20,16 @@
   background: url("../images/playPause.png") no-repeat 0 0;
 }
 
+#playPauseButton.play
+{
+	background-position:0 0;
+}
+
+#playPauseButton.pause
+{
+	background-position:0 -48px;
+}
+
 #nextButton
 {
   float: left;
@@ -81,6 +91,11 @@
 	display:block;
 }
 
+.hidden
+{
+	display:none;
+}
+
 #noResultsHolder
 {
   margin-left: auto;
@@ -88,4 +103,14 @@
   width:100px;
   color:#4C4C4C;
   font-weight:bold;
+}
+
+.playlistItemWrapper
+{
+	height:42px;
+}
+
+.playlistDefaultImage
+{
+	background-image: url('../images/SpeakerIcon.png');
 }

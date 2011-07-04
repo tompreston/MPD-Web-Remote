@@ -31,6 +31,7 @@
 	<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
 
 	<!-- Javascript -->
+	<script src="javascript/addRemoveClass.js" type="text/javascript"></script>
 	<script src="javascript/addtrackFunctions.js" type="text/javascript"></script>
 	
 	<title>Remote - Add Track</title>
@@ -56,8 +57,8 @@
 		
 		<ul class="pageitem">
 			<li class="store">
-				<a href=showSongs.php?mode=allsongs"> 
-					<span class="image" style="background-image: url('images/SpeakerIcon.png')"></span>
+				<a href=showSongs.php?mode=allsongs">
+					<span class="playlistDefaultImage image"></span>
 					<span class="comment" id="totalTrackCount">Tracks:</span>
 					<span class="name">All Tracks</span>
 					<span class="arrow"></span>
@@ -68,14 +69,6 @@
 		<div id="outerPlaylistHolder">
 			<span class="graytitle">Playlists</span>
 			<ul class="pageitem" id="innerPlaylistHolder">
-				<!--<li class="store">
-					<a class="noeffect" href=""> 
-						<span class="image" style="background-image: url('images/SpeakerIcon.png')"></span>
-						<span class="comment">Tracks: X</span>
-						<span class="name">Template Playlist</span>
-						<span class="arrow"></span>
-					</a>
-				</li>-->
 			</ul>
 		</div>
 		

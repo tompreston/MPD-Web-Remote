@@ -1,4 +1,3 @@
-seperate javascript/css
 transferal of data -> XML? either that or better the current methods
 Make quicker - stream results instead of waiting for whole lot
-New style sheets (non-webkit)
+New style sheets (non-webkit) - webkit is starting to get on my nerves. Might be moving the whole thing to non-webkit if possible. Sven will like this :-)

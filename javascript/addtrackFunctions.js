@@ -24,9 +24,11 @@ var updatePlaylists = function()
   xmlhttp.send();
   var playlists = xmlhttp.responseText;
   
-  if (playlists.length == 0)
+  var outerPlaylistHolder = document.getElementById("outerPlaylistHolder");
+	
+	if (playlists.length == 0)
   {
-    document.getElementById("outerPlaylistHolder").style.visibility = "hidden";
+		addClass(outerPlaylistHolder, "hidden");
   }
   else
   { 
@@ -42,7 +44,7 @@ var updatePlaylists = function()
       formatedPlaylists += 
       '<li class="store">' +
         '<a onclick="parent.location=\'showSongs.php?mode=playlist&playlist=' + playlistName + '\'">' +
-	        '<span class="image" style="background-image: url(\'images/SpeakerIcon.png\')"></span>' +
+	        '<span class="playlistDefaultImage"></span>' +
 	        '<span class="comment">Tracks: ' + trackCount + '</span>' +
 	        '<span class="name">' + playlistName + '</span>' +
        		'<span class="arrow"></span>' +
@@ -51,7 +53,7 @@ var updatePlaylists = function()
     }
     
     // Update elements
-    document.getElementById("outerPlaylistHolder").style.visibility = "visible";
+		removeClass(outerPlaylistHolder, "hidden");
     document.getElementById("innerPlaylistHolder").innerHTML = formatedPlaylists;
   }
 }

@@ -52,7 +52,7 @@ var formatPlayQueue = function(trackString)
     
     formatedTracks +=
     '<li>' +
-    '  <div id="playlistItemWrapper" onclick="playSong(' + trackNumber + ')" style="height:42px;">' +
+    '  <div class="playlistItemWrapper" onclick="playSong(' + trackNumber + ')">' +
     '    <span class="number">' + trackNumber + '</span>' +
     '    <span class="' + isPlaying + '"></span>' +
     '    <span class="name">' + title + ' - ' + artist + '</span>' +

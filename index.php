@@ -31,6 +31,7 @@
   <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
 
 	<!-- Javascript -->
+  <script src="javascript/addRemoveClass.js" type="text/javascript"></script>
   <script src="javascript/remoteFunctions.js" type="text/javascript"></script>
 	
 	<!-- Hostname -->
@@ -83,7 +84,7 @@
 			<div id="buttonWrapper">
 				<div id="buttonHolder">
 					<span id="previousButton"></span>
-					<span id="playPauseButton"></span>
+					<span id="playPauseButton" class="play"></span>
 					<span id="nextButton"></span>
 				</div>
 				<div id="buttonBackgroundFiller"></div>

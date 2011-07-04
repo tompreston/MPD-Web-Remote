@@ -36,14 +36,14 @@ var updatePage = function()
 	var connectedMessage = document.getElementById("connectedMessage");
 	if (serverResponse.search("Could not connect to the MPD server") != -1)
 	{
-		innerContent.style.visibility = "hidden";
-		rightButton.style.visibility	= "hidden";
+		addClass(innerContent, "hidden");
+		addClass(rightButton, "hidden");
 		connectedMessage.innerHTML = "Could not connect to MPD";
 	}
 	else
 	{
-		innerContent.style.visibility = "visible";
-		rightButton.style.visibility	= "visible";
+		removeClass(innerContent, "hidden");
+		removeClass(rightButton, "hidden"); 
 		var hostname = document.getElementById("hostname").content;
 		connectedMessage.innerHTML = "Connected to " + hostname;
 	}
@@ -66,28 +66,28 @@ var updatePage = function()
 	
 	// Deal with the status
 	var statusText;
-	var playPauseButtonText;
+	var playPauseButtonState;
 	switch (status)
 	{
 		case "play":
 			statusText = "Now Playing";
-			playPauseButton = "Pause";
+			playPauseButtonState = "Pause";
 		break;
 		case "pause":
 			statusText = "Paused";
-			playPauseButton = "Play";
+			playPauseButtonState = "Play";
 		break;
 		case "stop":
 			statusText = "Stopped";
-			playPauseButton = "Play";
+			playPauseButtonState = "Play";
 		break;
 	}
 	
 	// Update elements
 	document.getElementById("Status").innerHTML = statusText;
-	document.getElementById("Track").innerHTML = track;
+	document.getElementById("Track").innerHTML  = track;
 	document.getElementById("Artist").innerHTML = artist;
-	document.getElementById("Album").innerHTML = album;
+	document.getElementById("Album").innerHTML  = album;
 	
 	var theTime = new Date(); 
 	document.getElementById("lastUpdated").innerHTML = "Last Updated: " +
@@ -99,8 +99,18 @@ var updatePage = function()
 	
 	document.getElementById("playqueueCount").innerHTML = "Tracks: " + playqueueCount;
 
-	var backgroundShifter = (playPauseButton == "Play")?"0 0px":"0 -48px";
-	document.getElementById("playPauseButton").style.backgroundPosition = backgroundShifter;
+	var playPauseButton = document.getElementById("playPauseButton");
+
+	if (playPauseButtonState == "Play")
+	{
+		removeClass(playPauseButton, "pause");
+		addClass(playPauseButton, "play");
+	}
+	else
+	{
+		removeClass(playPauseButton, "play");
+		addClass(playPauseButton, "pause");
+	}
 }
 
 setInterval( "updatePage()", 10000 ); // Auto update the page
@@ -137,15 +147,11 @@ var playPause = function()
 {
 	if (status == "play") // then pause
 	{
-		// Change the image to a pause symbol
-		document.getElementById("playPauseButton").style.backgroundPosition="0 -48px"
 		pauseMPD();
 		updatePage();
 	}
 	else
 	{
-		// Change the image to a pause symbol
-		document.getElementById("playPauseButton").style.backgroundPosition="0 0px"
 		playMPD();
 		updatePage();
 	}
