@@ -1,0 +1,347 @@
+/*iWebKit css 5.04 by Christopher Plieger modified for non-iWebKit users :-)*/
+body{
+  margin:0;
+  min-width:240px;
+  //min-height:300px;
+  font-family:helvetica,sans-serif;
+  background: #c5ccd4;
+  background: rgb(50,50,50 );  
+  
+}
+
+
+#topbar {
+  
+}
+
+#title {
+  font-weight:bold;
+  text-align:center;
+  color:white;
+  position:absolute;
+  width:100%;
+  padding-top:10px;
+  padding-bottom:10px;
+  z-index:-1;
+  background-image: url(../images/filler.png);
+ 
+}
+
+
+#leftnav {
+  width:12em;
+  float:left;
+}
+
+#leftnav a {
+  /*background-image: url(../images/navleftblack.png);*/
+  background-repeat:no-repeat;
+  padding-left:30px;
+  background-color:transparent;
+  color: white;
+  border:none;
+}
+#leftnav a:hover {
+  /*background-image: url(../images/navleftblack.png);*/
+  background-repeat:no-repeat;
+  padding-left:30px;
+  background-color:transparent;
+  color:yellow;
+  border:none;
+}
+
+#leftnav a img {
+  border:none;
+}
+
+#rightbutton {
+  text-align:right;
+  color : green;
+  width:12em;
+  float:right;
+}
+
+a {
+  display:block;
+  color:rgb(73,102,145);
+  background-color: transparent;  
+  vertical-align:middle;
+  padding:10px;
+  text-decoration:none;
+  border-radius: 5px 10px;
+}
+
+a span {
+  /*display:inline*/
+}
+
+a:hover {
+  display:block;
+
+  background-color:rgb(240,240,240);  
+  //color: grey;
+}
+
+
+.checkbox {
+  color:rgb(73,102,145);
+  width:auto;
+}
+
+
+
+ul {
+  margin: 10px;
+  padding: 0;
+
+  list-style-type:none;
+
+}
+
+#rightbutton a {
+  /*background-image: url(../images/navleftblack.png);*/
+  background-repeat:no-repeat;
+  padding-left:30px;
+  background-color:transparent;
+  color: white;
+  border:none;
+}
+#rightbutton a:hover {
+  /*background-image: url(../images/navleftblack.png);*/
+  background-repeat:no-repeat;
+  padding-left:30px;
+  background-color:transparent;
+  color:yellow;
+  border:none;
+}
+
+.graytitle {
+  margin: 10px;
+  padding: 10px;
+  height:145px;
+  color: grey;
+  text-shadow:rgb(80,80,80) -3px -2px;
+  font-weight:bold;
+}
+
+#connectedMessage {
+  margin: 10px;
+  padding: 10px;
+  height:145px;
+  color: grey;
+  text-shadow:rgb(80,80,80) -3px -2px;
+  font-weight:bold;
+  
+}
+
+#content {
+  clear:both;
+  padding-top:40px;
+}
+
+.searchbox {
+}
+
+input {
+	border:thin solid rgb(80,80,80);
+	padding:10px;
+	background: rgb(50,50,50); 
+	color:rgb(73,102,145);
+}
+
+.searchbox fieldset{
+  clear:both;
+  text-align:center;
+  margin:10px;
+  padding:10px;
+  border: none;
+  
+}
+
+
+
+#innerContent {
+  margin : 0px;
+  
+}
+
+.pageitem {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding:10px;
+
+  border: thin solid rgb(80,80,80);
+  background-color: rgb(50,50,50);
+  color:rgb(240,240,240);
+
+}
+
+.header {
+  font-size:110%;
+  font-weight:bold;
+  color:rgb(73,102,145);
+}
+
+.menu {
+  /*width : 100%;*/
+}
+
+.name {
+  font-weight: bold;
+  padding-left:10px;
+  //border:thin solid red;
+}
+
+
+
+.comment{
+  font-weight: bold;
+  float:right;
+  padding-right:10px;
+}
+
+.arrow{
+  background-color:transparent;
+  float:right;
+  padding: 0 0 20px 20px;
+}
+
+#shuffleCheckbox {
+  float:right;
+}
+
+
+
+.playlistItemWrapper .number {
+
+  text-align:center;
+
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.playlistItemWrapper .time {
+  float:right;
+}
+
+.playlistItemWrapper .stop {
+  padding-left:10px;
+  background-color:transparent;
+}
+
+.playlistItemWrapper .play {
+  padding-left:10px;
+  margin-right:10px;
+  background-color:green;
+}
+
+
+.playlistItemWrapper {
+  display:inline;
+}
+
+#playlist ul {
+  margin:0;
+  padding:0;
+}
+
+#playlist li {
+ 
+  list-style-type:none;  
+  margin:10px;
+  padding:0;
+  clear:both;
+}
+
+#playlist li:hover{
+  background-color:rgb(240,240,240);
+}
+
+#playlist { 
+  color:rgb(73,102,145);
+  background-color:transparent;
+  border: thin solid rgb(80,80,80);
+}
+
+#trackList {
+
+}
+
+#trackList .time {
+  color:white;
+  float:right;
+  margin-right:10px;
+}
+#trackList .number {
+  margin-left:10px;
+  color:white;
+  text-align:right;
+}
+
+#trackList .name {
+  color:white;
+  text-align:right;
+  margin-left:20px;
+}
+#trackList .addTrack {
+  float:left;
+}
+#trackList li {
+  margin-bottom:10px;
+}
+
+/*
+.menu a {
+  display:block;
+  margin-bottom:5px;
+  width:100%;
+  padding:0px;
+  color: white;
+
+}
+*/
+a:first-child {
+  //border:thin solid black;
+}
+
+#duobutton {
+  background-color: yellow;
+}
+
+#tributton {
+  background-color: yellow;
+}
+
+#outerPlaylistHolder .arrow {
+
+}		
+
+#outerPlaylistHolder .name {
+
+}		
+
+
+#outerPlaylistHolder .playlistDefaultImage{
+  padding: 45px;
+  background-repeat:no-repeat;
+  background-position:center center;
+
+}
+
+#outerPlaylistHolder a {
+    padding:40px 0 40px 0;
+    vertical-align:middle;
+}
+
+#outerPlaylistHolder li {	
+  margin: 0 0 10px 0;
+
+}
+
+#footer {
+  text-align:center;
+}
+
+.noeffect {
+  
+}

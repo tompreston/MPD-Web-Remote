@@ -13,19 +13,8 @@
   <link rel="apple-touch-icon-precomposed" href="image.png"/><!-- icon on springboard 58x58px already  -->
   <link href="startup.png" rel="apple-touch-startup-image" /><!-- Start up icon 320x460px -->
   
-  <!-- Check for webkit -->
-	<script type="text/javascript">
-		// Are we using a webkit browser?
-    if (RegExp(" AppleWebKit/").test(navigator.userAgent))
-		{
-			document.write('<link href="css/iWebKit_style.css" rel="stylesheet" media="screen" type="text/css" />\n');
-			document.write('<script src="javascript/iWebKit_functions.js" type="text/javascript"></'+'script>\n');
-		}
-		else
-		{
-			document.write("This browser is not webkit enabled and because of this the remote will display incorrectly. Alternative style sheets are comming soon! :-)\n");
-		}
-	</script>
+	<!-- Check for browser -->
+  <script src="javascript/browserChoice.js" type="text/javascript"></script>
 	
 	<!-- Style Sheets -->
   <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
