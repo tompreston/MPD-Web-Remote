@@ -5,7 +5,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   
   <!-- iPhone Stuff -->
-  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+  <meta content="width=device-width, user-scalable=yes" name="viewport" />
   <meta name="keywords" content="iPhone, iPod Touch, remote, mpd, control, php" />
   <meta name="description" content="iPhone web based remote control for MPD" />
   <meta content="yes" name="apple-mobile-web-app-capable" /><!-- When opened from home screen app will not have safari bars -->
