@@ -39,6 +39,11 @@
   <meta name="mode" id="mode" content="<?php if (isset($_GET['mode'])) echo $_GET['mode']; ?>" />
   <meta name="playlistName" id="playlistName" content="<?php if (isset($_GET['playlist'])) echo $_GET['playlist']; ?>" />
   <meta name="searchText"  id="searchText"  content="<?php if (isset($_GET['searchText'])) echo $_GET['searchText']; ?>" />
+  <style>
+    #trackList li {
+      overflow:hidden;
+    }
+  </style>
 </head>
 
 <body class="musiclist">
