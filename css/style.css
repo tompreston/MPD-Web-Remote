@@ -38,7 +38,7 @@
   background: url("../images/next.png") no-repeat 0 0;
 }
 
-#buttonWrapper
+.buttonWrapper
 {
   /*position: absolute;
   top: 385px;*/
@@ -114,3 +114,21 @@
 {
 	background-image: url('../images/SpeakerIcon.png');
 }
+
+#bottombar {
+	position:fixed;
+	bottom:0px;
+	z-index: 1;
+}
+
+#topbar {
+	position:fixed;
+	top:0px;
+	width:100%;
+	z-index: 1;
+	
+}
+#content {
+	padding-top:44px;
+	padding-bottom:48px;
+
