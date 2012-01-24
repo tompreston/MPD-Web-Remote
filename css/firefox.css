@@ -86,6 +86,12 @@ a:hover {
 .checkbox {
   color:rgb(73,102,145);
   width:auto;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.checkbox input {
+  float:right;
 }
 
 
@@ -204,10 +210,6 @@ input {
   background-color:transparent;
   float:right;
   padding: 0 0 20px 20px;
-}
-
-#shuffleCheckbox {
-  float:right;
 }
 
 
