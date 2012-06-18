@@ -37,24 +37,29 @@ switch ($action)
   case "SkipTo":         $mpd->SkipTo($track);       break;
   case "RandomOn":       $mpd->SetRandom(1);         break;
   case "RandomOff":      $mpd->SetRandom(0);         break;
+  case "RepeatOn":       $mpd->SetRepeat(1);         break;
+  case "RepeatOff":      $mpd->SetRepeat(0);         break;
+  case "VolumeUp":       $mpd->AdjustVolume(5);      break;
+  case "VolumeDown":     $mpd->AdjustVolume(-5);     break;
   case "AddToPlayQueue": $mpd->PLAdd($track);        break;
   case "ClearPlayQueue": $mpd->PLClear();            break;
   case "AddAllTracksToPlayQueue": addAllTracks($mpd); break;
-  
+
   case "AddAllTracksInPlaylistToPlayQueue": /* lol */
     addAllTracksInPlaylist($_GET['playlist'], $mpd);
     break;
-    
+
   case "AddAllTracksFromSearchToPlayQueue":
     addAllTracksInSearch($_GET['searchText'], $mpd);
     break;
- 
+
   default:                                           break;
 }
 
-// Print MPD's information  
+// Print MPD's information
 echo $mpd->state."\n";
 echo $mpd->random."\n";
+echo $mpd->repeat."\n";
 echo $mpd->playlist_count."\n";
 
 if ($mpd->state != "stop")

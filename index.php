@@ -69,8 +69,18 @@
 			
 			<ul class="pageitem">
 				<li class="checkbox"><span class="name">Random</span><input id="shuffleCheckbox" type="checkbox" /></li>
+				<li class="checkbox"><span class="name">Repeat</span><input id="repeatCheckbox" type="checkbox" /></li>
 			</ul>
 			
+			<ul class="pageitem">
+				<li class="menu" id="volumeUp">
+					<span class="name">Volume Up</span>	
+				</li>
+				<li class="menu" id="volumeDown">
+					<span class="name">Volume Down</span>
+				</li>
+			</ul>
+
 			<ul class="pageitem">
 				<li class="menu">
 					<a href="playqueue.html">
@@ -79,19 +89,19 @@
 						<span class="arrow"></span>
 					</a>
 				</li>
-			</ul>
-			
-			<div id="buttonWrapper">
-				<div id="buttonHolder">
-					<span id="previousButton"></span>
-					<span id="playPauseButton" class="play"></span>
-					<span id="nextButton"></span>
-				</div>
-				<div id="buttonBackgroundFiller"></div>
-			</div>
-			
+			</ul>	
 		</div> <!-- inner content; don't display if we can't connect to mpd -->
 	</div>
+	
+	<div id="bottombar" class="buttonWrapper">
+		<div id="buttonHolder">
+			<span id="previousButton"></span>
+			<span id="playPauseButton" class="play"></span>
+			<span id="nextButton"></span>
+		</div>
+		<div id="buttonBackgroundFiller"></div>
+	</div>
+
 
 	<div id="footer">
 		<a class="noeffect" href="http://iwebkit.net">Thanks to iWebKit for all the style sheets.</a>
