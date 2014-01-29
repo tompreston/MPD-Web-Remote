@@ -126,9 +126,9 @@
 	top:0px;
 	width:100%;
 	z-index: 1;
-	
+	clear:both;
 }
-#content {
+#content, #body {
 	padding-top:44px;
 	padding-bottom:48px;
 
